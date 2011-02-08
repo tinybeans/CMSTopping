@@ -44,6 +44,9 @@ sub init_registry {
         tags => {
             function => {
                 'IndexTemplatePathname' => '$cms_topping::CMSTopping::Tag::hndlr_index_template_pathname',
+
+                'CategoryUtilLabel' => '$cms_topping::CMSTopping::Tag::ftag_category_util_label',
+                'CategoryUtilBasename' => '$cms_topping::CMSTopping::Tag::ftag_category_util_basename',
             },
         },
     });

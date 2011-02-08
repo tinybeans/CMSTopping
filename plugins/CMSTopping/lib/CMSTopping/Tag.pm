@@ -1,5 +1,6 @@
 package CMSTopping::Tag;
 use strict;
+use MT::Category;
 
 ###
 ##
@@ -21,5 +22,26 @@ sub hndlr_index_template_pathname {
     my $template = $ctx->stash('template');
     return $template->outfile || '';
 }
+
+# 
+# <$mt:CategoryUtilLabel id="n"$>
+# 
+sub ftag_category_util_label {
+    my ($ctx, $args) = @_;
+    my $id = $args->{id};
+    my $cat = MT::Category->load($id);
+    return $cat->label or '';
+}
+
+# 
+# <$mt:CategoryUtilBasename id="n"$>
+# 
+sub ftag_category_util_basename {
+    my ($ctx, $args) = @_;
+    my $id = $args->{id};
+    my $cat = MT::Category->load($id);
+    return $cat->basename or '';
+}
+
 
 1;
