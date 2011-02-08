@@ -18,21 +18,6 @@ my $plugin = MT::Plugin::CMSTopping->new({
     plugin_link    => 'http://www.tinybeans.net/blog/download/mt-plugin/cms-topping.html',
     l10n_class     => 'CMSTopping::L10N',
     schema_version => $SCHEMA_VERSION,
-#     blog_config_template => 'blog_config.tmpl',
-#     system_config_template => 'system_config.tmpl',
-#     settings    => new MT::PluginSettings([
-#             ['no_usercss',    {Default => 0,  Scope => 'system'}],
-#             ['no_CMSTopping',{Default => 0,  Scope => 'system'}],
-#             ['no_userjs',     {Default => 0,  Scope => 'system'}],
-#             ['no_slidemenu',  {Default => 0,  Scope => 'system'}],
-#             ['sys_jqplugin',  {Default => '', Scope => 'system'}],
-#             ['active',        {Default => 1,  Scope => 'blog'}],
-#             ['usercss',       {Default => 1,  Scope => 'blog'}],
-#             ['CMSTopping',   {Default => 1,  Scope => 'blog'}],
-#             ['userjs',        {Default => 1,  Scope => 'blog'}],
-#             ['slidemenu',     {Default => 1,  Scope => 'blog'}],
-#             ['jqplugin',      {Default => '', Scope => 'blog'}],
-#     ]),
 });
 MT->add_plugin($plugin);
 
